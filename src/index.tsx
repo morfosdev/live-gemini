@@ -222,6 +222,20 @@ color: "#c4302b",
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
+            styles:[`{
+height: "10px",
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
             styles:[
               {
                 backgroundColor: 'white',
@@ -276,344 +290,13 @@ color: "#c4302b",
             args,
           }}/>
         , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-height: "10px",
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toogles.titleBox`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `FALSO`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toogles.titleBox`],
-          value: [true]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            `VERDADEIRO`
-          ],
-
-          args,
-
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
             styles:[`{
 flexDirection: "row",
-alignItems: "center",
-justifyContent: "center",
 }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() =>"all.toogles.hashtagBox"]
- , trigger: 'on listen'
-}})],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-color: "#c4302b",
-}`
-          ],
-
-          children: [
-            `Criar Hashtags?`
-          ],
-
-          args,
-
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: "10px",
-}`],
-
-            functions:[()=>{}],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: "15px",
-height: "15px",
-borderWidth: "1px",
-}`],
-
-            functions:[
-        async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() =>"all.toogles.hashCheckBox"]
- , trigger: 'on listen'
-}}), 
-        async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toogles.hashCheckBox`],
-          value: [false]
-        }})]
- , trigger: 'on press'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toogles.hashtagBoxChecked`],
-          value: [true]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{
-width: "15px",
-height: "15px",
-borderWidth: "1px",
-alignItems: "center",
-justifyContent: "center",
-}`],
-
-            functions:[
-        async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [() =>"all.toogles.hashtagBoxChecked"]
- , trigger: 'on listen'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toogles.hashCheckBox`],
-          value: [true]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
-      componentSvg: (Svg:any, SvgObj:any) => {
-        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
-        return (props:any) => (<Svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
-    viewBox="0 0 24 24"
-    {...props}
-  >
-    <Path
-      fillRule="evenodd"
-      d="M19.707 6.293a1 1 0 0 1 0 1.414L10.414 17a2 2 0 0 1-2.828 0l-4.293-4.293a1 1 0 1 1 1.414-1.414L9 15.586l9.293-9.293a1 1 0 0 1 1.414 0Z"
-      clipRule="evenodd"
-    />
-  </Svg>)
-      },
-
-      svgOriginal: `
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M19.7071 6.29289C20.0976 6.68342 20.0976 7.31658 19.7071 7.70711L10.4142 17C9.63316 17.7811 8.36683 17.781 7.58579 17L3.29289 12.7071C2.90237 12.3166 2.90237 11.6834 3.29289 11.2929C3.68342 10.9024 4.31658 10.9024 4.70711 11.2929L9 15.5858L18.2929 6.29289C18.6834 5.90237 19.3166 5.90237 19.7071 6.29289Z" fill="#0F1729"/>
-</svg>
-      `,
-
-      altura: "20px",
-
-      largura: "20px",
-
-      preenchimento: ['black'],
-
-      args,
-    }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-color: "#c4302b",
-}`
-          ],
-
-          children: [
-            `Gostaria de ideias para o roteiro?`
-          ],
-
-          args,
-
-        }}/>, 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [()=>{}]
- , trigger: 'on press'
-}})],            childrenItems:[
-
-    (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{}],
-
-      styles:[
-              {
-                height: "50px",
-                width: "80px",
-                backgroundColor: "#FDFDFD",
-                borderWidth: 2,
-                borderColor: "#EEE"
-              }
-              ],
-
-      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/images%2FbtnYoutube.png?alt=media&token=135ca94e-c679-4506-8d1a-f2c1fe509b6a`],
-
-      args,
-    }}/>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -731,7 +414,8 @@ console.log({title});
 	});
 }]
  , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+}})],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -746,7 +430,25 @@ console.log({title});
 
           args,
 
-        }}/>],
+        }}/>, 
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[
+              {
+                height: "50px",
+                width: "80px",
+                backgroundColor: "#FDFDFD",
+                borderWidth: 2,
+                borderColor: "#EEE"
+              }
+              ],
+
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/images%2FbtnYoutube.png?alt=media&token=135ca94e-c679-4506-8d1a-f2c1fe509b6a`],
+
+      args,
+    }}/>],
 
             args,
           }}/>
