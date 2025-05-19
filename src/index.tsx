@@ -622,8 +622,9 @@ color: "#c4302b",
 	const apiKey = 'AIzaSyC8MD4ZTRedYmVIvwfAAVCX-OthA6QQ37c';
 
 	const allFields = tools.getCtData('all.inputs.title');
+console.log({allFields});
 	const { title } = allFields;
-
+console.log({title});
 	async function generateContent() {
 		const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=' + apiKey;
 
