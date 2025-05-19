@@ -436,6 +436,8 @@ console.log({title});
       elementsProperties:[{}],
 
       styles:[{
+width: "100px",
+height: "80px",
 borderRadius: "15px",
 }],
 
