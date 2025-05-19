@@ -231,6 +231,7 @@ height: "10px",
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -388,6 +389,51 @@ borderRadius: "15px",
 
       args,
     }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+height: "20px",
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+borderWidth: "1px",
+borderColor: "#c4302b",
+}`],
+
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+color: "#c4302b",
+}`
+          ],
+
+          children: [
+            `all.forms.youtubeGen.content.description`
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
