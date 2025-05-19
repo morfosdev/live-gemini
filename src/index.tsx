@@ -260,7 +260,7 @@ console.log({title});
 				{
 					parts: [
 						{
-							text: 'Você deve gerar o conteúdo pra preencher as informações do youtube (Enviar Vídeo). Gere uma sugestão para Título, Descrição, Hashs e Imagem de Capa, conforme detalhes a seguir:',
+							text: 'Você deve gerar o conteúdo pra preencher as informações do youtube (Enviar Vídeo). Gere uma sugestão para Título, Descrição sem hashtags, Hashs com símbolo # e Imagem de Capa, conforme detalhes a seguir:',
 						},
 						{ text: title },
 					],
