@@ -621,7 +621,7 @@ color: "#c4302b",
 	const path = 'all.forms.youtubeGen';
 	const apiKey = 'AIzaSyC8MD4ZTRedYmVIvwfAAVCX-OthA6QQ37c';
 
-	const allFields = tools.getCtData(all.inputs.title');
+	const allFields = tools.getCtData('all.inputs.title');
 	const { title } = allFields;
 
 	async function generateContent() {
