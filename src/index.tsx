@@ -428,7 +428,7 @@ color: "#c4302b",
           ],
 
           children: [
-            `all.forms.youtubeGen.content.description`
+            `$var_all.forms.youtubeGen.content.description`
           ],
 
           args,
