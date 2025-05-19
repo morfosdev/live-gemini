@@ -422,7 +422,7 @@ borderRadius: "15px",
 'titleBox': true, 
 'hashtagBox': true, 
 'hashCheckBox': true, 'hashtagBoxChecked': false } 
-, 'inputs': { 'title': Titulo Vazio } 
+, 'inputs': { 'title': undefined } 
  } 
  
 } 
