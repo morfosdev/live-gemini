@@ -134,7 +134,10 @@ fontSize: "16px",
 
             args,
           }}/>
-        , 
+        , (...args:any) => <Elements.ScrollBar pass={{
+            styles: [],
+            arrProps: [],
+            arrItems: [
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -593,6 +596,8 @@ color: "#c4302b",
             args,
           }}/>
         ],
+            args,
+        }}/>],
 
           functions:[()=>{}],
 
