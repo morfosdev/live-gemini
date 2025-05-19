@@ -409,6 +409,24 @@ height: "20px",
             args,
           }}/>
         , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+color: "#c4302b",
+}`
+          ],
+
+          children: [
+            `Título:`
+          ],
+
+          args,
+
+        }}/>, 
         
 
           (...args:any) => <Elements.DynView pass={{
