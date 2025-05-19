@@ -231,65 +231,6 @@ height: "10px",
             args,
           }}/>
         , 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[()=>{}],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-color: "#c4302b",
-}`
-          ],
-
-          children: [
-            `Ver sugestões`
-          ],
-
-          args,
-
-        }}/>, 
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[
-              {
-                backgroundColor: 'white',
-                justifyContent: 'center',
-                minHeight: 22,
-                width: "100%",
-              }
-              ],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [()=>{}]
- , trigger: 'on press'
-}})],            childrenItems:[() =><></>],
-
-            args,
-          }}/>
-        ],
-
-            args,
-          }}/>
-        , 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
