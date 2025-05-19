@@ -421,7 +421,9 @@ console.log({title});
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            `{
+color: "#c4302b",
+}`
           ],
 
           children: [
