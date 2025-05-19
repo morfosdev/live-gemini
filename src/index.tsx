@@ -422,7 +422,7 @@ borderRadius: "15px",
 'titleBox': true, 
 'hashtagBox': true, 
 'hashCheckBox': true, 'hashtagBoxChecked': false } 
-, 'inputs': { 'title': undefined } 
+, 'inputs': { 'title': Exemplo de titulo } 
  } 
  
 } 
