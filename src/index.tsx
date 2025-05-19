@@ -416,7 +416,7 @@ height: "20px",
             styles:[`{
 borderWidth: "1px",
 borderColor: "#c4302b",
-width: "400px"
+width: "200px"
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -463,7 +463,7 @@ height: "10px",
             styles:[`{
 borderWidth: "1px",
 borderColor: "#c4302b",
-width: "400px"
+width: "200px"
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -509,7 +509,7 @@ height: "10px",
             styles:[`{
 borderWidth: "1px",
 borderColor: "#c4302b",
-width: "400px"
+width: "200px"
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
