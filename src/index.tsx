@@ -539,7 +539,24 @@ height: "10px",
             args,
           }}/>
         , 
-        
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+color: "#c4302b",
+}`
+          ],
+
+          children: [
+            `Hashtags:`
+          ],
+
+          args,
+
+        }}/>, 
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -571,24 +588,7 @@ color: "#c4302b",
 
             args,
           }}/>
-        , (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{
-color: "#c4302b",
-}`
-          ],
-
-          children: [
-            `Hashtags:`
-          ],
-
-          args,
-
-        }}/>],
+        ],
 
             args,
           }}/>
