@@ -124,4 +124,3 @@ export const DynView = (props: Tprops) => {
     );
   }
 };
-

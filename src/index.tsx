@@ -29,15 +29,11 @@
         (...args: any) => <Elements.Screen3 pass={{
           pathScreen:"home",
 
-          styles:[
-              {
-                backgroundColor: '#101',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100%',
-                width: '100%',
-              }
-              ],
+          styles:[`{
+  flex: 1,
+  alignItems: "center",
+  backgroundColor: "#FFF",
+}`],
 
           screenElements:[
         
@@ -47,16 +43,12 @@
 
             styles:[`{
   flexDirection: "row",
-  backgroundColor: "#0064fe",
+  backgroundColor: "#c4302b",
   alignItems: "center",
   width: "100%",
 }`],
 
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [()=>"all.toggles.box1"]
- , trigger: 'on listen'
-}})],            childrenItems:[
+            functions:[()=>{}],            childrenItems:[
         
 
           (...args:any) => <Elements.DynView pass={{
@@ -73,27 +65,31 @@
       componentSvg: (Svg:any, SvgObj:any) => {
         const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
         return (props:any) => (<Svg
-xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 320 512"
-    fill="red"
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    viewBox="0 0 24 24"
     {...props}
   >
     <Path
-      fill="#fff"
-      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+      fillRule="evenodd"
+      d="M3 6a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Zm0 6a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Zm0 6a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Z"
+      clipRule="evenodd"
     />
   </Svg>)
       },
 
       svgOriginal: `
-        <svg></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 6C3 5.44772 3.44772 5 4 5H20C20.5523 5 21 5.44772 21 6C21 6.55228 20.5523 7 20 7H4C3.44772 7 3 6.55228 3 6ZM3 12C3 11.4477 3.44772 11 4 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H4C3.44772 13 3 12.5523 3 12ZM3 18C3 17.4477 3.44772 17 4 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H4C3.44772 19 3 18.5523 3 18Z" fill="#0F1729"/>
+</svg>
       `,
 
-      altura: "16px",
+      altura: "30px",
 
-      largura: "16px",
+      largura: "30px",
 
-      preenchimento: ['black'],
+      preenchimento: [`#fff`],
 
       args,
     }}/>],
@@ -107,6 +103,7 @@ xmlns="http://www.w3.org/2000/svg"
 
             styles:[`{
   flex: 1,
+  alignItems: "center",
 }`],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
@@ -116,13 +113,14 @@ xmlns="http://www.w3.org/2000/svg"
 
           arrStyles: [
             `{
-  color: "#FFF",
-  textAlign: "left",
+fontFamily: "YouTube Sans",
+color: "#FFF",
+fontSize: "16px",
 }`
           ],
 
           children: [
-            `Minha Tela`
+            `YouTube Video Generator`
           ],
 
           args,
@@ -136,7 +134,67 @@ xmlns="http://www.w3.org/2000/svg"
             args,
           }}/>
         , 
-        (...args:any) => <Elements.IptTxtEdit pass={{
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+  flex: 1,
+  alignItems: "center",
+}`],
+
+            functions:[()=>{}],            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+height: "20px",
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() =>"all.toogles.titleBox"]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+color: "#c4302b",
+}`
+          ],
+
+          children: [
+            `Sobre o que você quer falar?`
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.IptTxtEdit pass={{
           propsArray: [{}],
 
           stylesArray: [{
@@ -145,62 +203,112 @@ xmlns="http://www.w3.org/2000/svg"
                 // fontSize: '20px',<= #ATTENTION: Native ERROR! No string!
               }],
 
-          path: [`all.inputs.ipt1`],
+          path: [" "],
 
           funcsArray: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.inputs.ipt1`],
+          keyPath: [`all.inputs.title`],
           value: [`$arg_callback`]
         }})],
 
           args,
-        }}/>, 
-        
-
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{}'],
-
-            styles:[`{ width: 100, height: 20, backgroundColor: "yellow", alignItems: "center", justifyContent: "center" }`],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.box1`],
-          value: [true]
-        }})]
- , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            `{ color: "blue" }`
-          ],
-
-          children: [
-            `Mostrar`
-          ],
-
-          args,
-
         }}/>],
 
             args,
           }}/>
         , 
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
 
-            styles:[`{ width: 100, height: 20, backgroundColor: "yellow", alignItems: "center", justifyContent: "center" }`],
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+color: "#c4302b",
+}`
+          ],
+
+          children: [
+            `Ver sugestões`
+          ],
+
+          args,
+
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [()=>{}]
+ , trigger: 'on press'
+}})],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+height: "10px",
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [async (...args) =>
         functions.setVar({ args, pass:{
-          keyPath: [`all.toggles.box1`],
+          keyPath: [`all.toogles.titleBox`],
           value: [false]
         }})]
  , trigger: 'on press'
@@ -210,16 +318,438 @@ xmlns="http://www.w3.org/2000/svg"
           ],
 
           arrStyles: [
-            `{ color: "blue" }`
+            { color: 'black', fontSize: 12, }
           ],
 
           children: [
-            `Ocultar`
+            `FALSO`
           ],
 
           args,
 
         }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toogles.titleBox`],
+          value: [true]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `VERDADEIRO`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+flexDirection: "row",
+alignItems: "center",
+justifyContent: "center",
+}`],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() =>"all.toogles.hashtagBox"]
+ , trigger: 'on listen'
+}})],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+color: "#c4302b",
+}`
+          ],
+
+          children: [
+            `Criar Hashtags?`
+          ],
+
+          args,
+
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: "10px",
+}`],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: "15px",
+height: "15px",
+borderWidth: "1px",
+}`],
+
+            functions:[
+        async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() =>"all.toogles.hashCheckBox"]
+ , trigger: 'on listen'
+}}), 
+        async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toogles.hashCheckBox`],
+          value: [false]
+        }})]
+ , trigger: 'on press'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toogles.hashtagBoxChecked`],
+          value: [true]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[`{
+width: "15px",
+height: "15px",
+borderWidth: "1px",
+alignItems: "center",
+justifyContent: "center",
+}`],
+
+            functions:[
+        async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [() =>"all.toogles.hashtagBoxChecked"]
+ , trigger: 'on listen'
+}}), async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async (...args) =>
+        functions.setVar({ args, pass:{
+          keyPath: [`all.toogles.hashCheckBox`],
+          value: [true]
+        }})]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (<Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <Path
+      fillRule="evenodd"
+      d="M19.707 6.293a1 1 0 0 1 0 1.414L10.414 17a2 2 0 0 1-2.828 0l-4.293-4.293a1 1 0 1 1 1.414-1.414L9 15.586l9.293-9.293a1 1 0 0 1 1.414 0Z"
+      clipRule="evenodd"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19.7071 6.29289C20.0976 6.68342 20.0976 7.31658 19.7071 7.70711L10.4142 17C9.63316 17.7811 8.36683 17.781 7.58579 17L3.29289 12.7071C2.90237 12.3166 2.90237 11.6834 3.29289 11.2929C3.68342 10.9024 4.31658 10.9024 4.70711 11.2929L9 15.5858L18.2929 6.29289C18.6834 5.90237 19.3166 5.90237 19.7071 6.29289Z" fill="#0F1729"/>
+</svg>
+      `,
+
+      altura: "20px",
+
+      largura: "20px",
+
+      preenchimento: ['black'],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[()=>{}],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{
+color: "#c4302b",
+}`
+          ],
+
+          children: [
+            `Gostaria de ideias para o roteiro?`
+          ],
+
+          args,
+
+        }}/>, 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [()=>{}]
+ , trigger: 'on press'
+}})],            childrenItems:[
+
+    (...args:any) => <Elements.ImageBox pass={{
+      elementsProperties:[{}],
+
+      styles:[
+              {
+                height: "50px",
+                width: "80px",
+                backgroundColor: "#FDFDFD",
+                borderWidth: 2,
+                borderColor: "#EEE"
+              }
+              ],
+
+      URIvariablePath:[`https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/images%2FbtnYoutube.png?alt=media&token=135ca94e-c679-4506-8d1a-f2c1fe509b6a`],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:['{}'],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [async () => {
+	const path = 'all.forms.youtubeGen';
+	const apiKey = 'AIzaSyC8MD4ZTRedYmVIvwfAAVCX-OthA6QQ37c';
+
+	const allFields = tools.getCtData('all.forms.youtubeGen');
+	const { title } = allFields;
+
+	async function generateContent() {
+		const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=' + apiKey;
+
+		const data = {
+			contents: [
+				{
+					parts: [
+						{
+							text: 'Você deve gerar o conteúdo pra preencher as informações do youtube (Enviar Vídeo). Gere uma sugestão para Título, Descrição, Hashs e Imagem de Capa, conforme detalhes a seguir:',
+						},
+						{ text: title },
+					],
+				},
+			],
+			generationConfig: {
+				responseMimeType: 'application/json',
+				responseSchema: {
+					type: 'OBJECT',
+					properties: {
+						title: { type: 'STRING' },
+						description: { type: 'STRING' },
+						hashs: {
+							type: 'ARRAY',
+							items: { type: 'STRING' },
+						},
+					},
+					propertyOrdering: ['title', 'description', 'hashs'],
+				},
+			},
+		};
+
+		try {
+			const response = await fetch(url, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(data),
+			});
+
+			if (!response.ok) {
+				throw new Error('Erro:' + response.status + response.statusText);
+			}
+
+			const result = await response.json();
+			const rawText = result.candidates[0].content.parts[0].text;
+			console.log('Resultado da API:', result);
+
+			let parsedObject;
+			try {
+				parsedObject = JSON.parse(rawText);
+				console.log('Objeto convertido:', parsedObject);
+			} catch (e) {
+				console.error('Erro ao converter o texto em objeto:', e);
+			}
+
+			return parsedObject;
+		} catch (error) {
+			console.error('Erro na requisição:', error);
+		}
+	}
+
+	const generateImage = async () => {
+		const urlImg = 'https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key=' + apiKey;
+		const myHeaders = new Headers();
+		myHeaders.append('Content-Type', 'application/json');
+
+		const raw = JSON.stringify({
+			instances: [
+				{
+					prompt: 'A futuristic teddy bear flying in space.',
+				},
+			],
+			parameters: {
+				sampleCount: 2,
+				personGeneration: 'allow_adult',
+				includeSafetyAttributes: true,
+				aspectRatio: '1:1',
+			},
+		});
+
+		const requestOptions = {
+			method: 'POST',
+			headers: myHeaders,
+			body: raw,
+			redirect: 'follow',
+		};
+
+		return await fetch(urlImg, requestOptions)
+			.then(response => response.text())
+			.then(result => {
+				console.log({ result });
+				return result;
+			})
+			.catch(error => console.error(error));
+	};
+
+	const content = await generateContent();
+	const imageContent = await generateImage();
+
+	tools.functions.setVar({
+		args: '',
+		pass: { keyPath: [path], value: [{ content, imageContent }] },
+	});
+}]
+ , trigger: 'on press'
+}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            `Gerar`
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
@@ -245,7 +775,10 @@ xmlns="http://www.w3.org/2000/svg"
 'lst2': [{name: "Tarefa 1", date: "21/03/25"},{name: "Tarefa 2", date: "21/03/25"},{name: "Tarefa 3", date: "24/03/25"}], 'lst3': [{name: "Task 1"},{name: "Task 2"}] } 
 , 
 'name': "Name:", 
-'dataToSet': {name: "Carlos", phone: "1111"}, 'toggles': { 'box1': true } 
+'dataToSet': {name: "Carlos", phone: "1111"}, 'toogles': { 
+'titleBox': true, 
+'hashtagBox': true, 
+'hashCheckBox': true, 'hashtagBoxChecked': false } 
  } 
  
 } 
