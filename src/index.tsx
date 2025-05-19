@@ -141,6 +141,7 @@ fontSize: "16px",
             styles:[`{
   flex: 1,
   alignItems: "center",
+  padding: "10px",
 }`],
 
             functions:[()=>{}],            childrenItems:[
